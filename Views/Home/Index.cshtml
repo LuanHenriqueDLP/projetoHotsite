@@ -1,0 +1,175 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+
+<div class="row">
+    <div class="col-5 m-auto p-4">
+        <h2>Iniciativa Saúde da Cidade</h2>
+        <p>
+            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+        <p>
+            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+    </div>
+
+    <div class="col-7 d-flex align-items-center justify-content-center p-4">
+        <img width="90%" src="~/img/jamie-street-tb5A-QTI6xg-unsplash.jpg">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 border border-dark m-auto p-4">
+        <div class="text-left">
+            <h2>Entre em contato!:</h2>
+            <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+        </div>
+
+        <form method="POST" id="formMensagem" class="ml-5">
+            <div class="d-inline-flex flex-column justify-content-center align-items-end">
+                <div class="py-1">
+                    <label asp-for="Nome">Nome:</label>
+                    <input class="ml-3" id="idNome" asp-for="Nome" required/>
+                </div>
+                <div class="py-1">
+                    <label asp-for="Email">Email:</label>
+                    <input class="ml-3" id="idEmail" asp-for="Email" required/>
+                </div>
+                <div class="py-1">
+                    <label asp-for="Mensagem">Mensagem <br>(opcional):</label>
+                    <textarea class="ml-3 textarea-align" id="idMensagem" asp-for="Mensagem"></textarea>
+                </div>
+                <div class="py-1">
+                    <input type="submit" value="Enviar" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- MODAL ENVIO DE FORMULÁRIO
+    <div class="modal fade" id="idSubmit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dicas para uma vida saudável</h5>
+                </div>
+
+                <div class="modal-body">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="col-7 p-4 d-flex align-items-center justify-content-center text-center">
+        <div class="d-flex align-items-start">
+            <figure class="col-4 mt-3">
+                <img width="80%" src="~/img/towfiqu-barbhuiya-bwOAixLG0uc-unsplash (1).jpg">
+                <figcaption><a href="#" data-toggle="modal" data-target="#idAgenda">Agenda de <br>eventos</a></figcaption>
+            </figure>
+
+            <figure class="col-4 mt-3">
+                <img width="80%" src="~/img/artur-rutkowski-GdTLaWamFHw-unsplash.jpg">
+                <figcaption><a href="#" data-toggle="modal" data-target="#idDicas">Dicas de vida<br>saudável</a></figcaption>
+            </figure>
+
+            <figure class="col-4 mt-3">
+                <img width="80%" src="~/img/charlesdeluvio-AT5vuPoi8vc-unsplash.jpg">
+                <figcaption><a href="#" data-toggle="modal" data-target="#idApoiadores">Apoiadores</a></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- MODAIS -->
+    <div class="modal fade" id="idAgenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agenda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <h4>Evento 1 - 03/11/2023 18h30</h4>
+                    <p>Emagrecimento feminino: estratégias nutricionais & hormonização</p>
+
+                    <h4>Evento 2 - 05/11/2023 17h30</h4>
+                    <p>Bate papo esportivo: Nutrição e Esporte</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="idDicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dicas para uma vida saudável</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Manter um estilo de vida saudável envolve uma série de práticas diárias que beneficiam sua saúde física e mental. Aqui estão algumas dicas para ajudar você a viver uma vida mais saudável:</p>
+                    
+                    <p>Alimentação balanceada - Consuma uma variedade de alimentos, incluindo frutas, vegetais, proteínas magras, grãos integrais e laticínios com baixo teor de gordura. Evite alimentos processados e ricos em açúcar, sal e gorduras saturadas.  </p>
+
+                    <p>Hidratação - Beba bastante água ao longo do dia para manter seu corpo hidratado.</p>
+
+                    <p>Exercício regular e sono - Faça atividade física regularmente, como caminhar, correr, nadar, ou praticar esportes, de acordo com suas capacidades e interesses. Manter o sono regulado (cerca de 7 a 9 horas por noite) também é um diferencial para sua recuperação física e mental.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="idApoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Apoiadores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="column modal-body">
+                    <div class="d-flex align-items-center py-3">
+                        <div class="col-2">
+                            <img src="~/img/whole foods.png" class="img-fluid">
+                        </div>
+
+                        <div>
+                            <h5 class="m-0 p-0">Whole Foods Market</h5>
+                            <span>Cadeia de supermercados que se concentra em alimentos naturais e orgânicos.</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center py-3">
+                        <div class="col-2">
+                            <img src="~/img/Nike.png" class="img-fluid">
+                        </div>
+
+                        <div>
+                            <h5 class="m-0 p-0">Nike</h5>
+                            <span>Empresa de roupas e calçados esportivos que incentiva a atividade física.</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center py-3">
+                        <div class="col-2">
+                            <img src="~/img/my fitness pal.png" class="img-fluid">
+                        </div>
+                        <div>
+                            <h5 class="m-0 p-0">My Fitness Pal</h5>
+                            <span>Aplicativo de rastreamento de alimentos e exercícios que ajuda as pessoas a manter uma dieta saudável e ativa.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
